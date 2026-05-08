@@ -31,6 +31,31 @@ active_workstations(Shift, Workstations) :-
             Workstations).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% schedule_workstations(+Shift, +Workstations, +Available, -Schedule, -Remaining)
+%
+% Goes workstation by workstation and assigns employees to each one.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+schedule_workstations(_, [], Employees, [], Employees).
+schedule_workstations(Shift,
+                      [station(Station, Min, Max)|RestStations],
+                      AvailableEmployees,
+                      [workstation(Station, Workers)|RestSchedule],
+                      RemainingEmployees) :-
+    Min =< Max,
+    between(Min, Max, NumberOfWorkers),
+    select_workers(NumberOfWorkers,
+                   Shift,
+                   Station,
+                   AvailableEmployees,
+                   Workers,
+                   EmployeesAfterStation),
+    schedule_workstations(Shift,
+                          RestStations,
+                          EmployeesAfterStation,
+                          RestSchedule,
+                          RemainingEmployees).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % is_idle(+Station, +Shift)
 %
 % Checks if a workstation is idle during a shift.
