@@ -24,3 +24,15 @@ The main idea I focused on was keeping track of which employees are still availa
 
 I also added wrapper predicates for workstation\_idle/2, avoid\_workstation/2, and avoid\_shift/2 so the code can still run even if one of those facts is not included in a test file.
 
+
+
+\## May 8, 2026 - Simple Testing
+
+
+
+I tested the program using a small input file with three employees and one workstation. The program successfully loaded the input file and project2.pl file in SWI-Prolog. When I ran plan(Plan)., it returned a valid plan that assigned one employee to the workstation for each shift. 
+
+
+
+This confirmed that the basic plan structure, shift scheduling, and worker selection logic were working on a simple test case.
+
