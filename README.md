@@ -9,6 +9,7 @@ This project implements the Prolog backend for a work schedule planner. The main
 - project2.pl: Main Prolog source file.
 - devlog.md: Development log for the project.
 - README.md: Project description and run instructions.
+- example-input-1.pl: Simple test input file used to test plan/1.
 
 ## How to Run
 
