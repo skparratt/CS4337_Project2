@@ -10,6 +10,8 @@ This project implements the Prolog backend for a work schedule planner. The main
 - devlog.md: Development log for the project.
 - README.md: Project description and run instructions.
 - example-input-1.pl: Simple test input file used to test plan/1.
+- example-input-2.pl: Test input file with restrictions.
+- impossible-input.pl: Test input file where no valid plan should exist.
 
 ## How to Run
 
