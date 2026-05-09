@@ -48,3 +48,15 @@ I tested the project with more input cases. I used one test that included avoide
 
 I also tested an impossible case where there were not enough employees to meet a workstation requirement. In that case, plan(Plan). returned false, which is the expected result because no valid schedule could be made.
 
+
+
+\## May 8, 2026 - Provided Testing Files
+
+
+
+I added the provided testing.pl file and sample\_runs folder to the repository. I tested the project by loading a provided sample input file, project2.pl, and testing.pl in SWI-Prolog.
+
+
+
+The provided test printed employee names while checking the plan, and plan(Plan). returned a valid schedule. This helped confirm that the program works with the provided sample files.
+
