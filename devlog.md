@@ -36,3 +36,15 @@ I tested the program using a small input file with three employees and one works
 
 This confirmed that the basic plan structure, shift scheduling, and worker selection logic were working on a simple test case.
 
+
+
+\## May 8, 2026 - Additional Testing
+
+
+
+I tested the project with more input cases. I used one test that included avoided shifts, avoided workstations, idle workstations, and multiple workstations. The program returned a valid plan that followed those restrictions. 
+
+
+
+I also tested an impossible case where there were not enough employees to meet a workstation requirement. In that case, plan(Plan). returned false, which is the expected result because no valid schedule could be made.
+
